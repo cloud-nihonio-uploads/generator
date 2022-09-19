@@ -1,4 +1,4 @@
-function gen() => {
+function gen() {
 window.alert('hi')
 btn = document.getElementById('generate')
 btc = document.getElementById('final')
