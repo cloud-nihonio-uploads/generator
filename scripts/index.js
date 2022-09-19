@@ -1,7 +1,9 @@
 function gen() {
-window.alert('hi')
-btn = document.getElementById('generate')
-btc = document.getElementById('final')
+const domain = "https://kali.linux-user.ml/embed/";
+  const title = document.getElementById("title").value.replace("\n", "\\n");
+  const params = new URLSearchParams();
+  if (title) params.set("title", encodeURIComponent(title));
 
-btc.innerText = "test"
-}
+  const finalURLText = document.getElementById("final");
+  finalURLText.innerText = `${domain}?${params.toString()}`;
+};
